@@ -23,3 +23,6 @@ Route::get('CommentsByUser/{id?}','ProductController@showCommentsByUsers')
 ->where(['id'=>'[0-9]+']);
 Route::get('CommentsByProduct/{id?}','ProductController@showCommentsByProducts')
 ->where(['id'=>'[0-9]+']);
+
+//Ejemplo para Middleware
+Route::get('access/{user?}','ProductController@login');

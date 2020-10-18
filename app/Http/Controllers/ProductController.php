@@ -18,6 +18,17 @@ class ProductController extends Controller
         return $commentProduct;
     }
 
+    // ejemplo para Middleware
+    public function login($user=null){
+        if(!($user))
+            return response()->json("BIENVENIDO!",200);
+        return response()->json("BIENVENIDO ".$user.", has iniciado sesión.",200);
+    }
+
+    public function home(){
+        return "INICIO DE PAGINA.";
+    }
+
 
 
     
